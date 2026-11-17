@@ -1,0 +1,96 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f5f5f5;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin: 10px 0 6px;
+}
+
+.marcador {
+  margin: 6px 0;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  user-select: none;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card.flipped {
+  background: #fff;
+  border: 2px solid #999;
+}
+
+.card.matched {
+  background: #e8f5e9;
+  border-color: #4CAF50;
+  cursor: default;
+}
+
+.mensaje {
+  min-height: 1.4em;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.boton {
+  font-size: 1rem;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid #999;
+  background: #fff;
+  cursor: pointer;
+}
+
+.boton-instalar {
+  background: #4CAF50;
+  border-color: #388E3C;
+  color: #fff;
+}
+
+/* Pantallas pequeñas: las cartas crecen para tocarlas mejor */
+@media (max-width: 420px) {
+  .grid {
+    grid-template-columns: repeat(4, 64px);
+    gap: 8px;
+  }
+  .card {
+    width: 64px;
+    height: 64px;
+  }
+}
